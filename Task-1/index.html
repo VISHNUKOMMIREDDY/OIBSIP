@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARISTA</title>
+
+            
+
+    <style type="text/css">
+        
+        header{
+            height: 40px;
+            background-color:chocolate;
+            padding: 40px;    
+            position: fixed;
+            top:0; left: 0; right: 0;
+        }
+        .space{
+            height: 150px;
+        }
+        .demojs #demo{
+            color: white;
+            background-color:darkred;
+            width: 800px;
+            margin-left: 200px;
+            padding: 20px;
+            font-size: 30px;
+            margin-top: -20px;
+            border-radius: 10px;
+            border: 5px solid darkorange;
+            padding-top: 20px
+            ;
+        }
+        .home{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .hometitle img{
+           margin-right: 50px;
+          
+        }
+        .home .tooltip{
+            cursor: pointer;
+            
+        }
+        .home .tooltip:hover{
+            cursor: pointer;
+            opacity: 0.5;
+        }
+        
+        nav ul li{
+            color:white;
+            background-color:red;
+            display: inline; 
+            padding: 20px;
+            margin: 20px;
+            border-radius:30px;
+            font-size: 20px;
+          
+            
+        }
+        nav ul li:hover{
+            background-color: maroon;
+        }
+        nav ul{
+            margin-left: 50%;
+            margin-top: -70px;
+        }
+       
+        .imglogo{
+            margin-top: -20px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+       .img{
+        border-radius: 50%;
+       }
+       .Aboutus h1{
+        color: brown;
+        text-align: center;
+        font-size: 50px;
+        padding: 15px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+      
+     .main .aboutusimg img{
+       margin-left: 120px;
+       margin-top:10px;
+     }
+     .main{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: bisque;
+      }
+     .aboutusinfo .pre1,.pre2,.pre3{
+        color:darkorange ;
+        font-size: 25px;
+        padding: 40px;
+        margin-top: -50px;
+        margin-left: -200px;
+     }
+     
+     span{
+        color:darkred;
+        font-size: 40px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
+     }
+     .aboutusinfo hr{
+        margin-left: 115px;
+        margin-right: 70px;
+        margin-top: -70px;
+     }
+     .aboutusinfo .pre2,.pre3{
+        color:darkorange ;
+        font-size: 25px;
+        padding: 40px;
+        margin-top: -25px;
+        margin-left: -200px;
+     }
+    
+    .main1 .aboutusimg1 img{
+       margin-left: 120px;
+       margin-top: 40px;
+     }
+     .main1{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: bisque;
+      }
+      .aboutusinfo1 .pre4{
+        color:darkorange ;
+        font-size: 25px;
+        padding: 40px;
+        margin-top: 40px;
+        margin-left: -200px;
+       
+     }
+     .aboutusinfo1 img{
+        
+        padding: 40px;
+        margin-top: -50px;
+        margin-left: 70px;
+     }
+     .aboutusimg2 img{
+        margin-left: 200px;
+       margin-top: 40px;
+     }
+     .menu h1{
+        color: brown;
+        text-align: center;
+        font-size: 50px;
+        padding: 15px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+       .bgimage{
+        background-image: url(menuimg.jpg);
+        height: 850px;
+        width: 2000px;
+       }
+       .main2{
+        display:flex;
+        flex-wrap: wrap;
+      } 
+    .itemslist1 .itemscols1 h2{
+        color: red; 
+        font-size: 35px;  
+    }
+    .itemslist1 .itemscols1 li{
+        color: white;  
+        font-size: 25px;  
+    }
+    .itemslist1{
+        margin-left: 150px;
+        margin-top: 20px;
+        padding: 30px;
+        
+    }
+    .itemslist2 .itemscols2 h2{
+        color: red;
+        font-size: 35px;
+    }
+    .itemslist2 .itemscols2 li{
+        color: white;
+        font-size: 25px;
+    }
+    .itemslist2{
+        margin-left: 60px;
+        margin-top: 20px;
+        padding: 30px;
+     
+    }
+    .itemslist3 .itemscols3 h2{
+        color: red;
+        font-size: 30px;
+    }
+    .itemslist3 .itemscols3 li{
+        color: white;
+        font-size: 25px;
+    }
+    .itemslist3{
+        margin-left: 1100px;
+        margin-top: -725px;
+        padding: 30px; 
+       
+    }
+    .Products h1{
+        color: brown;
+        text-align: center;
+        font-size: 50px;
+        padding: 15px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+    .main3,.main4{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px;
+    }
+    .main3 .newitems{
+       margin: 20px;
+    }
+    .main4 .newitems{
+       margin: 20px;
+    }
+    .newitems h3{
+        text-align: center;
+    }
+    .itemimg{
+        box-shadow: 0 0 20px rgb(0,0,0,0.05);
+    }
+    .itemimg:hover{
+        opacity: 0.5;
+        box-shadow: 0 0 20px brown;
+    }
+    
+    table h2{
+        color: brown;
+        margin-top: -100px;
+    }
+    table pre{
+        color: black;
+        margin-top: 80px;
+        font-size: 25px;
+        margin-left: -320px;
+    }
+    .visitus h1{
+        color: brown;
+        text-align: center;
+        font-size: 50px;
+        padding: 15px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+       .main5{
+        display:flex;
+        flex-wrap: wrap;
+       }
+       .main5 p{
+        font-size: 40px;
+        margin: 40px;
+        margin-top: 200px;
+        color: darkred;
+        
+       }
+       .main5 .matter{
+        background-color:bisque ;
+       }
+       
+    .main6{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main6 img{
+           margin-left: 100px;
+    }
+    .main6 iframe,h2{
+        margin-left: 50px;
+    }
+    .contactus h1{
+        color: brown;
+        text-align: center;
+        font-size: 50px;
+        padding: 15px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+       .contactus pre{
+        color: brown;
+        text-align: center;
+        font-size: 25px;
+        padding: 15px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: -10px;
+       }
+       .main7{
+        display:flex;
+        flex-wrap: wrap;
+       }
+       
+       .main7 .table{
+        margin-left: 300px;
+        padding: 10px;
+       }
+       table td{
+        font-size: 20px;
+       }
+       table td input,textarea{
+          width:200px;
+          height: 25px;
+          margin-left: 70px;
+       }
+       footer{
+        color: white;
+        background-color: black;
+        text-align: center;
+        height: 200px;
+       }
+       footer .paragraph p{
+        margin-bottom: -50px;
+        font-size: 20px;
+       }
+
+       .socialmedias{
+             display: flex;
+             flex-wrap: wrap;
+             margin-top: -30px;
+             margin-left: 875px;
+             padding: 20px;
+       }
+       .socialmedias .facebook{
+        margin-top: -3px;
+       }
+       footer h2{
+        margin-top: 65px;
+       }
+    </style>
+
+</head>
+
+<body>
+   
+
+  
+     <header>
+        <nav>
+             <div class="imglogo">
+                <img src="logo.png" height="100px" width="100px" class="img">
+             </div>
+          <ul>
+             <li><a href="#home">Home</a></li>
+             <li><a href="#Aboutus">Aboutus</a></li>
+             <li><a href="#menu">Menu</a></li>
+             <li><a href="#Products">Products</a></li>
+             <li><a href="#visitus">Visitus</a></li>
+             <li><a href="#contactus">Contactus</a></li>
+          </ul> 
+        </nav>
+    </header>
+   <div class="space"></div>
+
+
+
+
+    <section id="home">
+        <div class="home">
+             <div class="hometitle">
+            <marquee scrollamount="10" behavior="alternate" >
+                <img src="baristatitle.png" width="900px" height="250px" class="tooltip" title="click hear for more info!!!" usemap="#baristatitle">
+            </marquee>
+            </div>
+            <div class="demojs">
+                <marquee direction="up" scrollamount="1">
+                    <p id="demo"> </p>
+                </marquee>
+             </div>
+            <map name="baristatitle">
+                <area shape="rect" coords="5,39,2011,973" target="_blank" href="https://en.wikipedia.org/wiki/Barista_(company)">
+            </map>
+        </div>
+    
+        <div >
+            <img src="baristaimg.jpg" width="2020px" height="700px" >
+        </div>
+    </section>
+    
+    
+    <section id="Aboutus"  class="Aboutus">
+        <h1>ABOUT US !</h1>
+        <div class="main"> 
+            <div class="aboutusimg">
+                <img src="aboutusimg.jpg" height="600px">
+            </div>
+            <div class="aboutusinfo">
+                <pre class="pre1">     
+                    <span>Our</span> journey from the bean to the cup started in year 2000.Café culture had not
+                    set its footprint and coffee was still considered a luxury.Our quest to provide
+                    a truly internationalexperience and brew a truly Italian cuppa,led us to create 
+                    the brand Barista. Spearheading the Indian café culture,Barista  was an opport
+                    unity  to discover  both the coffee and the craft.    
+                </pre>
+                <hr>
+                <pre class="pre2">
+                    <span>No</span> one has mastered coffee better than the Italians. Tipping our hats their way,
+                    Barista brings new meaning to Italian coffee and eats in the Indian sub-continent.
+                    Today, we continue to brew coffee the way world does and in our journey we have 
+                    created coffee relationships with our customers across India, Sri Lanka, Maldives,
+                    Bangladesh, Nepal and Myanmar.
+                </pre>
+                <hr>
+                <pre class="pre3">
+                    <span>Good</span> experiences, like good coffee, are best when shared. Want to be a part of the
+                    Barista family? Become our partner to our exciting chain of craft coffee by franchi
+                    -sing with us! Give us a little, and get back a whole lot more because we make your 
+                    investment experience more rewarding.
+                </pre>
+             </div>
+        </div>
+       
+
+        <div class="main1">
+            <div class="aboutusimg1">
+                <img src="aboutusimg1.jpg" height="550px" width="400px">
+            </div>
+            <div class="aboutusinfo1">
+                <pre class="pre4">
+                    <span>Tipping</span> our hats their way,Barista brings new meaning to Italian coffee and 
+                    the Indian sub-continent. Good experiences, like good coffee, are best when shared. 
+                    Want to be a part of the Barista family?Become our partner to our exciting chain of
+                    craft coffee by franchising with us!Give us a little, and get back a whole lot more
+                    because we make your investment experience more rewarding.    
+                </pre>
+                
+                <img src="baristaadv.png" width="800px" height="200px">
+            </div>
+        </div>
+    </section>
+   
+     <section id="menu" class="menu">
+
+        <h1>OUR MENU ITEMS...!</h1>
+        
+        <div  class="bgimage">
+           <div class="main2">
+            <div class="itemslist1">
+                <ul class="itemscols1">
+                    <li><h2>HOT CLASSICS</h2></li>
+                    <li>ESPRESSO  </li>
+                    <li>AFFOGATO</li>
+                    <li>CONPANNA</li>
+                    <li>CAFÉ AMERICANO</li>
+                    <li>CAPPUCCINO</li>
+                    <li>CAFÉ LATTE</li>
+                    <li>CAFÉ MOCHA</li>
+                    <li>HOT CHOCOLATE</li>
+                    
+                    <li><h2>COLD CLASSICS</h2></li>
+                    <li>BRRRISTA</li>                                                                
+                    <li>BRRRISTA FRAPPE</li>
+                    <li>ICED AMERICANO</li>
+                    <li>ICED CAFÉ MOCHA</li>
+                    <li>SMOOTHIES</li>
+                    <li>CHOCOLATE SMOOTHIE</li>
+                    <li>INDULGENT COFFEES</li>
+                    <li>BROWNIE FRAPPE</li>
+                  </ul>
+                </div>
+
+            <div class="itemslist2">
+                <ul class="itemscols2">
+                    <li><h2>INDULGENT COFFEES</h2></li>
+                    <li>BARRRISTA BLAST</li>                                                                
+                    <li>BROWNIE FRAPPE</li>
+                    
+                    <li><h2>SMOOTHIES</h2></li>
+                    <li>CHOCOLATE SMOOTHIE</li>      
+                    
+                    <li><h2>TEA</h2></li>
+                    <li>GINGER HONEY</li>
+                    <li>ASSAM TEA</li>
+                    <li>MASALA TEA</li>
+                    <li>GREEN TEA</li>
+                    <li>DARJEELING TEA</li>
+                    <li>TULSI TEA</li>
+                    <li>GINGER TEA</li>
+                    <li>CARDAMOM TEA</li>
+                </ul>
+            </div>
+
+            <div class="itemslist3">
+                <ul class="itemscols3">
+                    <li><h2>ICED TEAS</h2></li>
+                    <li>LEMON ICED TEA </li>
+                    <li>PEACH ICED TEA</li>
+                   
+
+                    <li><h2>GRANITAS</h2></li>
+                    <li>BREEZY APPLE SPLASH</li>                                                                
+                   
+                  
+                    <li><h2>ADD ONS</h2></li>
+                    <li>WHIPPED CREAM</li>                                                                
+                    <li>VANILA FLAVOUR</li>
+                    <li>IRISH CREAM FLAVOUR</li>      
+                    <li>HAZELNUT FLAVOUR</li>
+                    <li>CHOCOLATE FUDGE</li>
+                    <li>ESPRESSO SHOT</li>
+                    <li>VANILLA IC</li>
+                    <li>CARAMEL SAUCE</li>
+                </ul>
+            </div>
+           </div>
+       </div>
+         <h1>Whats New...?</h1> 
+         <div class="main3">
+            <div class="newitems">
+               <img src="newitem1.jpg" width="350" height="350" class="itemimg">
+               <h3>Orangina</h3>
+            </div>
+            <div class="newitems">
+                <img src="newitem2.jpg" width="350" height="350" class="itemimg">
+                <h3>Strawberry Cheese Cake</h3>
+             </div>
+             <div class="newitems">
+                <img src="newitem3.jpg" width="350" height="350" class="itemimg">
+                <h3>Orange Carrot and Peach</h3>
+             </div>
+             <div class="newitems">
+                <img src="newitem4.jpg" width="350" height="350" class="itemimg">
+                <h3>Macchiato</h3>
+             </div>
+             <div class="newitems">
+                <img src="newitem5.jpg" width="350" height="350" class="itemimg">
+                <h3>Flat White</h3>
+             </div>
+            </div>
+
+            <div class="main4">
+               <div class="newitems">
+                  <img src="newitem6.jpg" width="350" height="350" class="itemimg">
+                  <h3>Orangina</h3>
+               </div>
+               <div class="newitems">
+                   <img src="newitem7.jpg" width="350" height="350" class="itemimg">
+                   <h3>Strawberry Cheese Cake</h3>
+                </div>
+                <div class="newitems">
+                   <img src="newitem8.jpg" width="350" height="350" class="itemimg">
+                   <h3>Orange Carrot and Peach</h3>
+                </div>
+                <div class="newitems">
+                   <img src="newitem9.jpg" width="350" height="350" class="itemimg">
+                   <h3>Macchiato</h3>
+                </div>
+                <div class="newitems">
+                   <img src="newitem10.jpg" width="350" height="350" class="itemimg">
+                   <h3>Flat White</h3>
+                </div>
+               </div>
+     </section>   
+    
+
+     <section class="Products" id="Products">
+
+        <h1>PRODUCTS</h1>
+        <div class="products">
+        <table>
+            <tr class="row1">
+                <td><img src="imgproduct1.png" height="500" width="500" class="img"><td>
+                <td>
+                     <h2 style="margin-top: -100px;">CHOC-0-AFFAIR DARK SLAB</h2>
+                        <pre>
+                        The silky-smooth texture 
+                        that comes forth brings 
+                        nothing but pure bliss. Fall 
+                        in love with this affair more 
+                        than you had ever been 
+                        before.
+                        </pre>
+                <td>
+                <td><img src="imgproduct2.png" height="600" width="500"><td>
+                <td>
+                    <h2 style="margin-top: 70px;"> BARISTA GOLD BLEND- 100G</h2>
+                    <pre>
+                        Barista Gold Blend made 
+                        with 100% pure coffee 
+                        beans, enjoy your daily 
+                        cuppa at home as you 
+                        would at your local café. 
+                        This easily soluble coffee 
+                        powder divinely liquefies 
+                        with hot milk and water to 
+                        make that perfect cup. Freshen
+                        up with your day with Barista 
+                        Gold Blend.
+
+                    </pre>
+                <td>
+            </tr>
+    
+            <tr class="row2">
+                <td><img src="imgproduct3.png" height="600" width="500"><td>
+                <td>
+                    <h2 style="margin-top: 70px;">COFFEE POWDER - HOUSEBLEND</h2>
+                    <pre>
+                        A perfect way to start your 
+                        day. Enjoy the spectacular 
+                        blend of fine 100% Arabica 
+                        beans roasted to dark 
+                        chestnut color, loaded with 
+                        authentic flavor of Italian 
+                        coffee. Feel the touch of 
+                        sweetness & subtle flavor 
+                        of the cocoa with this 
+                        house blend.
+
+                    </pre>
+                    
+                <td>
+                <td><img src="imgproduct4.png" height="500" width="500"><td>
+                <td>
+                    <h2 style="margin-top: 90px;">BARISTA GOLD BLEND- 50G</h2>
+                    <pre>
+                        Barista Gold Blend made 
+                        with 100% pure coffee 
+                        beans, enjoy your daily 
+                        cuppa at home as you 
+                        would at your local café.
+                        This easily soluble coffee 
+                        powder divinely liquefies 
+                        with hot milk and water to 
+                        make that perfect cup. 
+                        Freshen up with your day 
+                        with Barista Gold Blend.
+
+                    </pre>
+                <td>
+            </tr>
+
+
+            <tr class="row3">
+                <td><img src="imgproduct5.png" height="500" width="500"><td>
+                <td>
+                    <h2 style="margin-top: -70px;">CHOCO CHIP - COOKIE TIN</h2>
+                    <pre>
+                        This is a little bite of bliss if 
+                        choco is on your mind ? 
+                        Yummy Cookies infused
+                        with crunchy chocolate 
+                        chunks. Not be missed with 
+                        your favourite cup of coffee
+                    </pre>  
+                <td>
+                <td><img src="imgproduct6.png" height="500" width="500"><td>
+                <td>
+                    <h2 style="margin-top: -20px;">CHOCO MOCHA - COOKIE TIN</h2>
+                    <pre>
+                        Surprise your taste buds 
+                        with some deliciously soft , 
+                        thick & chewy choco mocha 
+                        cookies infused with coffee 
+                        & studded with chocolate. 
+                        Incredible flavor of coffee 
+                        & chocolate now in cookies too.
+                    </pre>  
+                <td>
+            </tr>
+
+
+            <tr class="row4">
+                <td><img src="imgproduct7.png" height="550" width="500"><td>
+                <td>
+                    <h2 style="margin-top: 70px;">BARISTA INSTANT COFFEE PREMIX</h2>
+                    <pre>
+                        Enjoy the smooth and 
+                        aromatic taste of Barista’s 
+                        instant coffee made from 
+                        100% pure coffee beans. 
+                        Add hot water and get the 
+                        perfect cup of coffee full of 
+                        rich & intense aroma in less 
+                        than a minute anytime 
+                        anywhere. A delight for all 
+                        coffee lovers!
+                    </pre>  
+                <td>
+                <td><img src="imgproduct8.png" height="500" width="500"><td>
+                <td>
+                    <h2 style="margin-top: -80px;">CHOC-0-AFFAIR MILK SLAB</h2>
+                    <pre>
+                        The taste of true love, taste 
+                        the luxury in every bite 
+                        with our milk choco slab 
+                        especially crafted for you 
+                        and your loved ones.
+                    </pre>  
+                <td>
+            </tr>
+        </table>
+       </div>
+     </section>
+    
+
+     <section class="visitus" id="visitus">
+           <h1>VISIT US</h1>
+       <div class="main5">
+           <div class="visitusimg">
+            <marquee scrollamount="4">
+                <img src="imgvisitus.jpg" width="800px" height="500px">
+            </marquee>
+           </div>
+           <div class="matter">
+            <p>We know that a great morning starts with a great cup of coffee,<br>
+            so sniff the bean trail and find the way to your nearest Barista!♨️</p>
+           </div>
+        </div>
+        <br>
+        <br>
+        <h1>LOCATION 📍</h1>
+        <h2 style="color: firebrick;">It's not TOO DIFFICULT TO LOOK OUT FOR US!</h2>
+    <div class="main6">
+        <div class="iframe">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84277.56555464161!2d79.90978266021679!3d14.41070571900784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4cf3262b068c89%3A0x108e3aa7c164432a!2sBarista!5e0!3m2!1sen!2sin!4v1684587412068!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="location">
+            <img src="imglocation.jpg" width="1000px" height="450px">
+        </div>
+    </div>
+     </section>
+
+     <section class="contactus" id="contactus">
+
+        <h1>CONTACT US</h1>
+        <pre>
+            We love to hear what you think – Fill in the form below or
+    mail us at information<span>@barista.co.in</span> and we’ll get back to you as soon as we can!
+        </pre>
+
+        <div class="main7">
+            <div>
+              <h2 style="color: firebrick; margin-left: 320px;">REGISTERED OFFICE</h2>
+              <pre>
+            Barista Coffee Company Limited
+            Unit No 301 to 304, Third Floor, Vipul Agora, MG Road, Sector 28
+            Gurugram, Haryana -122002, India.
+            <br> 
+             Email ID : information@barista.co.in
+              </pre>
+            </div>
+           
+            <div class="table">
+             <h2 style="color: firebrick; margin-left: 0px;">Please submit your details below and we will get back to you.</h2>
+            
+             <table >
+                <tr>
+                    <td><label for="fname"> FIRST NAME:</label></td>
+                    <td><input type="text" name="fname" id="fname"></td>
+                </tr>             
+                <tr>
+                    <td><label for="lname"> LAST NAME:</label></td>
+                    <td><input type="text" name="lname" id="lname"></td>
+                </tr>             
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" name="email" id="email"></td>
+                </tr>    
+                <tr>
+                    <td><label for="telno">CONTACT NO:</label></td>
+                    <td><input type="tel" name="telno" id="telno"></td>
+                </tr>             
+                <tr>
+                    <td><label for="city">CITY:</label></td>
+                    <td><input type="text" name="city" id="city"></td>
+                </tr>             
+                <tr>
+                    <td><label for="message">MESSAGE:</label></td>
+                    <td><textarea></textarea></td>
+                    
+                </tr>             
+               
+            </table>
+                <button value="submit">submit</button>
+            </div>
+        </div>
+     </section>
+
+     <footer>
+        <div class="paragraph">
+            <p>©Barista Coffee Company Limited. All Rights Reserved.</p>
+        </div>
+       <h2>LET'S STAY CONNECTED</h2>
+       <h3>Follow Us</h3>
+        <div class="socialmedias">
+
+            <div class="facebook">
+                <a href="https://www.facebook.com/BaristaCoffeeCompany/"><img src="facebook.png" height="50px" width="50px"></a>
+            </div>
+            <div class="insta">
+                <a href="https://www.instagram.com/baristacoffeecompany/"><img src="insta.png" height="50px" width="50px"></a>
+            </div>
+            <div class="twitter">
+                <a href="https://twitter.com/BaristaCoffeeIN"><img src="twitter.png" height="50px" width="50px"></a>
+            </div>
+            <div class="linkedin">
+                <a href="https://www.linkedin.com/company/barista-coffee-company/"><img src="linkedin.png" height="50px" width="50px"></a>
+            </div>
+
+        </div>
+        
+     </footer>
+
+ 
+     <script src="permision.js"></script>
+
+     <script src="uptoTimeUpdater.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
